@@ -60,17 +60,6 @@ function applyLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const banners = document.querySelectorAll(".partner-banners img");
-    const bannerProgress = document.querySelector(".partner-banner-progress");
-    let activeBanner = 0;
-
-    bannerProgress.addEventListener("animationiteration", () => {
-        banners[activeBanner].hidden = true;
-        activeBanner = (activeBanner + 1) % banners.length;
-        banners[activeBanner].hidden = false;
-    });
-    bannerProgress.classList.add("is-running");
-
     const langBtn = document.getElementById("langBtn");
     const langMenu = document.getElementById("langMenu");
 
@@ -125,3 +114,6 @@ function copyPromo(el) {
         document.body.removeChild(ta);
     }
 }
+window.addEventListener("load", () => {
+    document.querySelector(".page-loader").remove();
+}, { once: true });

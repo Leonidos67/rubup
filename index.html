@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="page-loader" role="status" aria-label="Загрузка изображений">
+        <span class="page-loader-spinner" aria-hidden="true"></span>
+    </div>
+    <noscript><style>.page-loader { display: none; }</style></noscript>
 
     <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
     <div class="lang-switcher">
@@ -29,15 +33,6 @@
         
         <!-- HEADER -->
         <header class="header">
-            <div class="partner-banners">
-                <a href="https://t.me/RubUP?start=8986415588" target="_blank">
-                    <img src="./img/1.jpg" onerror="this.src='https://placehold.co/728x90/60aeff/fff?text=4+FREE+CASES'" alt="4 бесплатных кейса">
-                    <img src="./img/2.jpg" onerror="this.src='https://placehold.co/728x90/ff529a/fff?text=UPGRADE'" alt="Апгрейд" hidden>
-                </a>
-                <div class="partner-banner-track" aria-hidden="true">
-                    <div class="partner-banner-progress"></div>
-                </div>
-            </div>
             <h1 class="username casino-font">
                 RubUP 
                 <svg class="verified-icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
@@ -73,7 +68,7 @@
         <section class="podcast-section">
             <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="podcast-card clickable-card">
                 <!-- Если картинка коровки отвалится, покажет заглушку -->
-                <img src="https://i.ibb.co/B219n354/image.png" onerror="this.src='https://placehold.co/480x200/ff529a/000?text=Korovka+Game'" alt="Режим Коровка RubUP" class="podcast-img">
+                <img src="https://i.ibb.co/B219n354/image.png" onerror="this.onerror=null;this.src='https://placehold.co/480x200/ff529a/000?text=Korovka+Game'" alt="Режим Коровка RubUP" class="podcast-img">
                 <div class="podcast-play-btn">
                     <span data-i18n="cowTitle">ИГРАТЬ В КОРОВКУ ОНЛАЙН</span>
                 </div>
@@ -96,21 +91,13 @@
             </a>
         </div>
 
-        <!-- БЛОКИ С КАРТИНКАМИ (2 ШТУКИ) -->
-        <section class="shop-section">
-            <div class="bonus-grid">
-
-                <!-- Первый блок: Skeleton Knife -->
-                <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="bonus-banner-link">
-                    <img src="https://i.ibb.co/XxZQ9yY4/image.png" onerror="this.src='https://placehold.co/440x250/fffb73/000?text=Skeleton+Knife'" alt="Skeleton Knife" class="bonus-banner-img">
-                </a>
-
-                <!-- Второй блок: Eternal Rose -->
-                <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="bonus-banner-link">
-                    <img src="https://i.ibb.co/6R2zCvH5/image.png" onerror="this.src='https://placehold.co/440x250/2eff8c/000?text=Eternal+Rose'" alt="Eternal Rose" class="bonus-banner-img">
-                </a>
-
-            </div>
+        <section class="bonus-banners">
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank">
+                <img src="https://i.ibb.co/XxZQ9yY4/image.png" onerror="this.onerror=null;this.src='https://placehold.co/440x250/fffb73/000?text=Skeleton+Knife'" alt="Skeleton Knife">
+            </a>
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank">
+                <img src="https://i.ibb.co/6R2zCvH5/image.png" onerror="this.onerror=null;this.src='https://placehold.co/440x250/2eff8c/000?text=Eternal+Rose'" alt="Eternal Rose">
+            </a>
         </section>
 
         <!-- FOOTER -->

@@ -221,103 +221,6 @@ body {
 }
 
 /* ========================================== */
-/* 8. БЛОКИ С КАРТИНКАМИ (2 ШТУКИ)            */
-/* ========================================== */
-.shop-section {
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.section-title {
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #000;
-    background: #fffb73;
-    display: inline-block;
-    padding: 4px 10px;
-    border: 2px solid #000;
-    border-radius: 8px;
-    box-shadow: 2px 2px 0 #000;
-}
-
-.bonus-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.bonus-banner-link {
-    display: block;
-    border: 3px solid #000000;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 4px 4px 0px #000000;
-    transition: transform 0.1s, box-shadow 0.1s;
-    background: #fbf9df;
-    width: 100%;
-    min-height: 100px; /* Защита от схлопывания */
-}
-
-.bonus-banner-link:hover { transform: translateY(-3px); box-shadow: 4px 7px 0px #000000; }
-.bonus-banner-link:active { transform: translateY(3px); box-shadow: 1px 1px 0px #000000; }
-
-.bonus-grid .bonus-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: #eee;
-}
-
-.partner-banners {
-    margin-bottom: 14px;
-}
-
-.partner-banners a {
-    display: block;
-}
-
-.partner-banners img {
-    border-radius: 10px;
-    width: 100%;
-    vertical-align: top;
-    aspect-ratio: 728 / 90;
-    object-fit: contain;
-}
-
-.partner-banners img:not([hidden]) {
-    animation: partner-banner-fade-in 250ms ease-out;
-}
-
-@keyframes partner-banner-fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.partner-banner-track {
-    height: 4px;
-    margin-top: 5px;
-    overflow: hidden;
-    border-radius: 2px;
-    background: #ddd;
-}
-
-.partner-banner-progress {
-    height: 100%;
-    background: #000;
-    transform-origin: left;
-}
-
-.partner-banner-progress.is-running {
-    animation: partner-banner-countdown 5s linear infinite;
-}
-
-@keyframes partner-banner-countdown {
-    from { transform: scaleX(1); }
-    to { transform: scaleX(0); }
-}
-
-/* ========================================== */
 /* 10. ПОДВАЛ                                 */
 /* ========================================== */
 .footer {
@@ -395,3 +298,47 @@ body {
 
 .lang-option:hover { background: #fbf9df; }
 .lang-option.active { background: #2eff8c; }
+.bonus-banners {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.bonus-banners a {
+    overflow: hidden;
+    border: 3px solid #000;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.bonus-banners img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    background: #fbf9df;
+}
+
+.page-loader-spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #000;
+    border-top-color: #2eff8c;
+    border-radius: 50%;
+    animation: page-loader-spin 800ms linear infinite;
+}
+
+@keyframes page-loader-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-loader-spinner { animation: none; }
+}
