@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">RubUP Бонусы</title>
-    <!-- Подключаем футуристичный шрифт Orbitron из Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
@@ -28,16 +27,17 @@
 
     <div class="container">
         
-        <!-- HEADER С ГАЛЕРЕЕЙ ИЗ 5 NFT -->
+        <!-- HEADER -->
         <header class="header">
-            <!-- <div class="header-nft-gallery">
-                <img src="https://nft.fragment.com/gift/santahat-60467.medium.jpg" alt="NFT 1" class="header-nft size-md">
-                <img src="https://nft.fragment.com/gift/signetring-15786.medium.jpg" alt="NFT 2" class="header-nft size-md">
-                <img src="https://nft.fragment.com/gift/santahat-66888.medium.jpg" alt="NFT 3" class="header-nft size-md">
-                <img src="https://nft.fragment.com/gift/vintagecigar-9507.medium.jpg" alt="NFT 4" class="header-nft size-md">
-                <img src="https://nft.fragment.com/gift/durovscap-2110.medium.jpg" alt="NFT 5" class="header-nft size-md">
-            </div> -->
-            
+            <div class="partner-banners">
+                <a href="https://t.me/RubUP?start=8986415588" target="_blank">
+                    <img src="./public/1.jpg" onerror="this.src='https://placehold.co/728x90/60aeff/fff?text=4+FREE+CASES'" alt="4 бесплатных кейса">
+                    <img src="./public/2.jpg" onerror="this.src='https://placehold.co/728x90/ff529a/fff?text=UPGRADE'" alt="Апгрейд" hidden>
+                </a>
+                <div class="partner-banner-track" aria-hidden="true">
+                    <div class="partner-banner-progress"></div>
+                </div>
+            </div>
             <h1 class="username casino-font">
                 RubUP 
                 <svg class="verified-icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
@@ -48,65 +48,68 @@
             <p class="location" data-i18n="location">🔥 ЗАБИРАЙ ЛУТ ПО ССЫЛКАМ НИЖЕ 🔥</p>
         </header>
 
-        <!-- БЛОК С ПРОМОКОДОМ MALVINALORD -->
+        <!-- БЛОК С ПРОМОКОДАМИ -->
         <section class="bio-block">
-            <h3 class="casino-font" data-i18n="promoTitle">🎁 ЛОВИ ПРОМОКОД С ТИKТОКА:</h3>
-            <div class="promo-badge" id="promoCode" onclick="copyPromo()">MALVINALORD</div>
-            <p class="promo-subtext" data-i18n-html="promoSubtext">Нажми, чтобы скопировать.<br/> Дает +100% на баланс и 2 бесплатных кейса!</p>
+            <h3 class="casino-font" data-i18n="promoTitle">🎁 ТВОИ ПРОМОКОДЫ:</h3>
+            <p class="promo-subtext" data-i18n="promoSubtext">Нажми на код, чтобы скопировать.</p>
+
+            <div class="promo-list">
+                <div class="promo-row">
+                    <span class="promo-label" data-i18n="promoFirst">Бонус на первое пополнение</span>
+                    <button type="button" class="promo-badge" data-code="500BONUS" onclick="copyPromo(this)">500BONUS<span class="promo-copy-icon" aria-hidden="true"></span></button>
+                </div>
+                <div class="promo-row">
+                    <span class="promo-label" data-i18n="promoCsgo">Бесплатный кейс CS:GO</span>
+                    <button type="button" class="promo-badge" data-code="GET-FREE-SKIN" onclick="copyPromo(this)">GET-FREE-SKIN<span class="promo-copy-icon" aria-hidden="true"></span></button>
+                </div>
+                <div class="promo-row">
+                    <span class="promo-label" data-i18n="promoNft">Бесплатный NFT-подарок</span>
+                    <button type="button" class="promo-badge" data-code="GET-FREE-NFT" onclick="copyPromo(this)">GET-FREE-NFT<span class="promo-copy-icon" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ РЕЖИМА КОРОВКА -->
+        <section class="podcast-section">
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="podcast-card clickable-card">
+                <!-- Если картинка коровки отвалится, покажет заглушку -->
+                <img src="https://i.ibb.co/B219n354/image.png" onerror="this.src='https://placehold.co/480x200/ff529a/000?text=Korovka+Game'" alt="Режим Коровка RubUP" class="podcast-img">
+                <div class="podcast-play-btn">
+                    <span data-i18n="cowTitle">ИГРАТЬ В КОРОВКУ ОНЛАЙН</span>
+                </div>
+            </a>
         </section>
 
         <!-- ГЛАВНЫЕ ПАРТНЕРСКИЕ ССЫЛКИ -->
         <div class="links-container">
-            <a href="https://t.me/rubup?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
                 <span class="btn-left" data-i18n="btnEnter">🚀 ВХОД НА RubUP (ЗАПУСТИТЬ БОТА)</span>
                 <span class="btn-dots">➔</span>
             </a>
-            <a href="https://t.me/rubup?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
                 <span class="btn-left" data-i18n="btnWheel">🎡 КОЛЕСО ФОРТУНЫ (БЕСПЛАТНЫЙ СПИН)</span>
                 <span class="btn-dots">➔</span>
             </a>
-            <a href="https://t.me/rubup?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
                 <span class="btn-left" data-i18n="btnNft">🎁 NFT-ПОДАРОК (БЕСПЛАТНЫЙ ПОДАРОК)</span>
                 <span class="btn-dots">➔</span>
             </a>
         </div>
 
-        <!-- СЕКЦИЯ РЕЖИМА КОРОВКА -->
-        <section class="podcast-section">
-            <a href="https://t.me/rubup?start=8986415588" target="_blank" class="podcast-card clickable-card">
-                <img src="https://i.ibb.co/B219n354/image.png" alt="Режим Коровка RubUP" class="podcast-img">
-                <div class="podcast-play-btn">
-                    <span data-i18n="cowTitle">ИГРАТЬ В КОРОВКУ ОНЛАЙН</span>
-                    <span class="sub-text" data-i18n="cowSub">Переводи корову через дорогу, собирай алмазы и забирай х100 к балансу! Успей, пока режим раздает!</span>
-                </div>
-            </a>
-        </section>
-
-        <!-- ДОПОЛНИТЕЛЬНЫЕ ССЫЛКИ -->
-        <div class="links-container">
-            <a href="https://t.me/rubup?start=8986415588" target="_blank" class="brutal-btn blue-btn">
-                <span class="btn-left" data-i18n="btnDaily">🎁 ЗАБРАТЬ ЕЖЕДНЕВНЫЙ БОНУС</span>
-                <span class="btn-dots">➔</span>
-            </a>
-        </div>
-
-        <!-- СЛАЙДЕР С БАННЕРАМИ РОЗЫГРЫШЕЙ -->
+        <!-- БЛОКИ С КАРТИНКАМИ (2 ШТУКИ) -->
         <section class="shop-section">
-            <div class="slider-wrapper">
-                <div class="shop-slider" id="shopSlider">
-                    
-                    <!-- Первый баннер: Skeleton Knife -->
-                    <a href="https://t.me/rubup?start=8986415588" target="_blank" class="bonus-banner-link">
-                        <img src="https://i.ibb.co/XxZQ9yY4/image.png" alt="Еженедельный нож Skeleton Knife" class="bonus-banner-img">
-                    </a>
+            <div class="bonus-grid">
 
-                    <!-- Второй баннер: Eternal Rose -->
-                    <a href="https://t.me/rubup?start=8986415588" target="_blank" class="bonus-banner-link">
-                        <img src="https://i.ibb.co/6R2zCvH5/image.png" alt="Ежедневная роза Eternal Rose" class="bonus-banner-img">
-                    </a>
+                <!-- Первый блок: Skeleton Knife -->
+                <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="bonus-banner-link">
+                    <img src="https://i.ibb.co/XxZQ9yY4/image.png" onerror="this.src='https://placehold.co/440x250/fffb73/000?text=Skeleton+Knife'" alt="Skeleton Knife" class="bonus-banner-img">
+                </a>
 
-                </div>
-                <button class="slider-arrow" id="slideRight">➔</button>
+                <!-- Второй блок: Eternal Rose -->
+                <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="bonus-banner-link">
+                    <img src="https://i.ibb.co/6R2zCvH5/image.png" onerror="this.src='https://placehold.co/440x250/2eff8c/000?text=Eternal+Rose'" alt="Eternal Rose" class="bonus-banner-img">
+                </a>
+
             </div>
         </section>
 
