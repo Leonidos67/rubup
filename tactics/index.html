@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">RubUP Тактики и Стратегии</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+    <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn" aria-label="Change language">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                <circle cx="12" cy="12" r="9" stroke="#000" stroke-width="2"/>
+                <path d="M3 12h18M12 3c2.5 2.5 3.5 6 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-6-3.5-9s1-6.5 3.5-9z" stroke="#000" stroke-width="2"/>
+            </svg>
+        </button>
+        <div class="lang-menu" id="langMenu">
+            <button data-lang="ru" class="lang-option active">🇷🇺 Русский</button>
+            <button data-lang="en" class="lang-option">🇬🇧 English</button>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <header class="header">
+            <h1 class="username casino-font">
+                RubUP 
+                <svg class="verified-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.7 2.3c.7-.7 1.9-.7 2.6 0l1.1 1.1c.4.4.9.6 1.4.5l1.5-.2c1-.1 1.9.6 2 1.6l.2 1.5c0 .5.3 1 .7 1.4l1.1 1.1c.7.7.7 1.9 0 2.6l-1.1 1.1c-.4.4-.6.9-.5 1.4l.2 1.5c.1 1-.6 1.9-1.6 2l-1.5.2c-.5 0-1 .3-1.4.7l-1.1 1.1c-.7.7-1.9.7-2.6 0l-1.1-1.1c-.4-.4-.9-.6-1.4-.5l-1.5.2c-1 .1-1.9-.6-2-1.6l-.2-1.5c0-.5-.3-1-.7-1.4l-1.1-1.1c-.7-.7-.7-1.9 0-2.6l1.1-1.1c.4-.4.6-.9.5-1.4l-.2-1.5c-.1-1 .6-1.9 1.6-2l1.5-.2c.5 0 1-.3 1.4-.7l1.1-1.1z" fill="#2da1f7"/>
+                    <path d="M9 11.5l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </h1>
+            <p class="location" data-i18n="headerSub">📈 ТАКТИКИ И СТРАТЕГИИ</p>
+        </header>
+
+        <!-- РЕЙТИНГ -->
+        <section class="info-card green-card">
+            <div class="info-row">
+                <div class="info-block">
+                    <span class="info-label" data-i18n="rating">Рейтинг</span>
+                    <span class="info-value casino-font">4.9 ⭐</span>
+                </div>
+                <div class="info-block">
+                    <span class="info-label" data-i18n="payback">Окупаемость</span>
+                    <span class="info-value casino-font">92%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТВОИ ПРОМОКОДЫ -->
+        <section class="bio-block">
+            <h3 class="casino-font" data-i18n="promoTitle">🎁 ТВОИ ПРОМОКОДЫ:</h3>
+            <p class="promo-subtext" data-i18n="promoSubtext">Нажми на код, чтобы скопировать.</p>
+
+            <div class="promo-list">
+                <div class="promo-row">
+                    <span class="promo-label" data-i18n="promoFirst">Бонус на первое пополнение</span>
+                    <div class="promo-badge" data-code="500BONUS" onclick="copyPromo(this)">500BONUS</div>
+                </div>
+                <div class="promo-row">
+                    <span class="promo-label" data-i18n="promoCsgo">Бесплатный кейс CS:GO</span>
+                    <div class="promo-badge" data-code="GET-FREE-SKIN" onclick="copyPromo(this)">GET-FREE-SKIN</div>
+                </div>
+                <div class="promo-row">
+                    <span class="promo-label" data-i18n="promoNft">Бесплатный NFT-подарок</span>
+                    <div class="promo-badge" data-code="GET-FREE-NFT" onclick="copyPromo(this)">GET-FREE-NFT</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КНОПКА ПЕРЕХОДА -->
+        <div class="links-container">
+            <a href="https://t.me/RubUP?start=8986415588" target="_blank" class="brutal-btn yellow-btn">
+                <span class="btn-left" data-i18n="btnGoToSite">🚀 ПЕРЕЙТИ НА САЙТ RUBUP</span>
+                <span class="btn-dots">➔</span>
+            </a>
+        </div>
+
+        <!-- ТАКТИКА ЧАСА -->
+        <section class="tactic-section">
+            <h2 class="section-title casino-font" data-i18n="tacticTitle">🔥 Тактика часа</h2>
+            <div class="tactic-card">
+                <div class="tactic-header" data-i18n="tacticHeader">АПГРЕЙД</div>
+                <div class="tactic-content">
+                    <p data-i18n="tacticDesc">За последний час мы проанализировали актуальную статистику RubUP, уделив внимание результатам апгрейдов подарков, распределению коэффициентов и особенностям работы игровых механик. На основе свежих данных удалось выделить наиболее интересные диапазоны шансов для апгрейда, учитывая вероятность успеха и потенциальную ценность подарков. Результаты анализа легли в основу актуальной тактики часа RubUP, которая помогает эффективнее использовать возможности бота!</p>
+                    
+                    <div class="tactic-steps">
+                        <div class="step">
+                            <span class="step-num">1</span>
+                            <span class="step-text" data-i18n="step1">Переходим на сайт по кнопке выше, чтобы активировать тактику в текущей сессии</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">2</span>
+                            <span class="step-text" data-i18n="step2">Необходимый баланс: <strong>любой</strong></span>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">3</span>
+                            <span class="step-text" data-i18n="step3">Заходим в апгрейд</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">4</span>
+                            <span class="step-text" data-i18n="step4">Делаем апгрейд в диапазоне <strong>8.52-12.33%</strong></span>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">5</span>
+                            <span class="step-text" data-i18n="step5">Выигрываем апгрейд</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О САЙТЕ -->
+        <section class="about-section">
+            <h2 class="section-title casino-font" data-i18n="aboutTitle">ℹ️ О сайте</h2>
+            <div class="about-card">
+                <p data-i18n="aboutDesc">RubUP — Telegram-бот с подарками и разнообразными мини-играми, где можно открывать кейсы, улучшать подарки с помощью апгрейда и пробовать разные игровые режимы. Мы изучили основные возможности RubUp, протестировали механику кейсов и апгрейда, а также рассмотрели особенности доступных мини-игр. RubUp объединяет популярные способы взаимодействия с Telegram-подарками в одном месте и подойдёт тем, кто хочет разнообразить игровой процесс, попробовать разные режимы и использовать различные стратегии.</p>
+            </div>
+        </section>
+
+        <!-- ОБЩАЯ ИНФОРМАЦИЯ -->
+        <section class="general-info">
+            <h2 class="section-title casino-font" data-i18n="infoTitle">📊 Общая информация</h2>
+            <div class="info-table">
+                <div class="table-row">
+                    <span class="table-label" data-i18n="infoYear">Год основания</span>
+                    <span class="table-value">2026</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label" data-i18n="infoFair">Проверка честности</span>
+                    <span class="table-value" data-i18n="infoFairVal">Есть</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label" data-i18n="infoDep">Методы депозита</span>
+                    <span class="table-value" data-i18n="infoDepVal">Crypto, СБП, Телеграм подарки</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label" data-i18n="infoWith">Вывод</span>
+                    <span class="table-value" data-i18n="infoWithVal">RUB, Crypto, Телеграм подарки</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-username casino-font" data-i18n="footerTitle">УДАЧИ В ИГРЕ! 🎰</div>
+            <p class="credits">CaseTactic © 2023-2026<br>KAPTEN LTD: Company number 15499898, 111 Fulham Palace Road, London, England, W6 8JA<br>Для сотрудничества: adv@casetactic.com</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
